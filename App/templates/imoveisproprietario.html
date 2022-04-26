@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Corretora API - Proprietários - Imóveis</title>
+    </head>
+    <body>
+        <h1>Imóveis</h1>
+        <hr>
+        <a href="{{url_for("cadastroImoveis", idProprietario = idProprietario)}}">Novo Imovel</a>
+        <tr>        
+            <br>
+            <a href="{{url_for("listaImoveisProprietario", idProprietario = idProprietario)}}">Listar Imoveis</a>
+            <br>     
+        <br>
+        <br>                
+        <a href="{{url_for("index")}}">voltar</a>
+    </body>
+</html>

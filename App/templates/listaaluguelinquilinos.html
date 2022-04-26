@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Corretora API - Aluguel - Lista de Inquilinos</title>
+    </head>
+    <body>
+        <h1>Lista de Inquilinos</h1>
+        <hr>
+        <table border>
+            <tr>
+                <td>ID</td>
+                <td>Nome</td>            
+                <td>CPF</td>
+                <td>E-mail</td>                                
+                
+            </tr>
+            {% for inquilino in inquilinos%}
+            <tr>
+                <td><a href="/aluguel/{{idRandom}}/selecionarinquilino/{{inquilino.id}}">{{inquilino.id}}</a></td>                
+                <td>{{inquilino.nome}}</td>
+                <td>{{inquilino.cpf}}</td>
+                <td>{{inquilino.email}}</td>                                
+            </tr>
+            {% endfor %}    
+        </table><br>                
+        <br>
+        <br>    
+    </body>

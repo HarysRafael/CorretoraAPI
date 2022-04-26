@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Corretora API - Corretores - Lista de Corretores</title>
+    </head>
+    <body>
+        <h1>Lista de Corretores</h1>
+        <hr>
+        <table border>
+            <tr>
+                <td>ID</td>
+                <td>Nome</td>            
+                <td>Matrícula</td>
+                <td>E-mail</td> 
+                <td>Telefone</td>               
+                <td>Excluir</td>       
+                <td>Atualizar</td>
+                <td>Contratos</td>                
+            </tr>
+            {% for corretor in corretores%}
+            <tr>
+                <td>{{corretor.id}}</td>
+                <td>{{corretor.nome}}</td>                
+                <td>{{corretor.matricula}}</td>
+                <td>{{corretor.email}}</td>
+                <td><a href="/corretor/{{corretor.id}}/telefones">Lista</a></td>
+                <td><a href="/corretores/deletar/{{corretor.id}}">X</a></td>
+                <td><a href="/corretores/atualizar/{{corretor.id}}">Atualizar</a></td>                
+                <td><a href="/corretor/{{corretor.id}}/alugueis">+</a></td>                
+                
+            </tr>
+            {% endfor %}
+        </table><br>
+        <a href="{{url_for("corretores")}}">Voltar</a>
+        <br>
+        <br>
+        <a href="{{url_for("index")}}">Home</a>
+    </body>

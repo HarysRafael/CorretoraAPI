@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Corretora API - Proprietário - Telefones</title>
+    </head>
+    <body>
+        </form>
+        <h1>Lista de Telefones</h1>
+        <hr>
+        <table border>
+            <tr>
+                <td>ID</td>                
+                <td>DDD</td>            
+                <td>Numero</td>
+                <td>Contato</td>                
+                <td>Excluir</td>       
+                <td>Atualizar</td>                
+            </tr>
+            
+            {% for telefone in telefones%}       
+            <tr>
+                <td>{{telefone.id}}</td>                
+                <td>{{telefone.ddd}}</td>
+                <td>{{telefone.numero}}</td>
+                <td>{{telefone.contato}}</td>                
+                <td><a href="/telefones/deletar/{{telefone.id}}">X</a></td>
+                <td><a href="/telefones/atualizar/{{telefone.id}}">Atualizar</a></td>                                
+            </tr>            
+            {% endfor %}    
+            
+        </table><br>        
+        <a href="{{url_for("cadastroTelefones", pessoaId = pessoaId) }}">Novo Telefone</a>
+        <br>                
+        <a href="{{url_for("listaProprietarios")}}">Voltar</a>
+        <br>
+        <a href="{{url_for("index")}}">Home</a>
+    </body>
