@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Corretora API - Imóveis - Imóveis Disponiveis</title>
+    </head>
+    <body>
+        <h1>Lista de Imóveis Disponíveis</h1>
+        <hr>
+        <table border>
+            <tr>
+                <td>ID</td>
+                <td>Metros²</td>            
+                <td>Preço</td>
+                <td>Tipo</td>                
+                <td>Endereço</td>                                                       
+            </tr>
+            {% for imovel in imoveis%}
+            <tr>
+                <td>{{imovel.id}}</td>
+                <td>{{imovel.area}}</td>            
+                <td>{{imovel.preco}}</td>
+                <td>{{imovel.tipo}}</td>
+                <td><a href="/endereco/{{imovel.id}}">Endereço</a></td>                                  
+            </tr>
+            {% endfor %}
+        </table><br>
+        <a href="{{url_for("imoveis")}}">Voltar</a>
+        <br>
+        <br>
+        <a href="{{url_for("index")}}">Home</a>
+    </body>

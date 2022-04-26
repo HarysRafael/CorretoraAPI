@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">        
+        <title>Corretora API - Proprietário - Imóveis - Novo Imóvel</title>
+    </head>
+    <body>
+        <h1>Cadastrar Imóvel</h1> 
+        <hr>
+        <form action = "{{url_for("cadastrarEnderecos", idRandom = idRandom) }}" =  method="POST">                                    
+            <table>
+                <tr>
+                    <label for = "rua">Rua</label><br>
+                    <input type = "text" name = "rua" placeholder = "Rua" /><br>
+                    <label for = "numero">Número</label><br>
+                    <input type = "text" name = "numero" placeholder = "Número" /><br>
+                    <label for = "complemento">Complemento</label><br>
+                    <input type = "text" name = "complemento" placeholder = "Complemento" /><br>
+                    <label for = "bairro">Bairro</label><br>
+                    <input type = "text" name = "bairro" placeholder = "Bairro" /><br>      
+                    <label for = "cidade">Cidade</label><br>
+                    <input type = "text" name = "cidade" placeholder = "Cidade" /><br>                
+                    <label for = "cep">CEP</label><br>
+                    <input type = "text" name = "cep" placeholder = "CEP" /><br>          
+                </tr>                
+            </table><br>
+            <input type = "submit" value = "Cadastrar">
+        </form>                    
+    </body>
+</html>
